@@ -22,7 +22,26 @@ use("sample_restaurants")
 // db.restaurants.find({"borough":"Bronx"}).limit(5);
 
 //! 7.    Mostrar los primeros 3 restaurantes después de omitir los primeros 10 que se encuentran en el distrito Bronx.
-db.restaurants.find({"borough":"Bronx"}).skip(10).limit(3);
+// db.restaurants.find({"borough":"Bronx"}).skip(10).limit(3);
 
-//!
+//! 8.    Encuentrar todos los restaurantes que se ubican en latitud valor inferior a -95.754168.
+db.restaurants.find({"address.coord.0" : {$lt : -95.754168}})
+
+//! 9.    encuentre la identificación del restaurante, el nombre, el municipio y la cocina de aquellos restaurantes que contienen 'Wil' como las primeras tres letras de su nombre.
+
+
+//! 10.    encuentre la identificación del restaurante, el nombre, el municipio y la cocina de aquellos restaurantes que contienen 'ces' como las últimas tres letras de su nombre.
+//! 11.    Encuentre el id del restaurante, el nombre, el distrito y el tipo de cocina de aquellos restaurantes que contienen 'Reg' como tres letras en alguna parte de su nombre.
+//! 12.    Encuentre el nombre del restaurante, distrito, coordenadas (longitud y latitud) y tipo de cocina para aquellos restaurantes que contienen 'mon' como tres letras en alguna parte de su nombre.
+//! 13.    Encuentre el nombre del restaurante, el distrito, coordenadas (longitud y latitud) y el tipo de cocina de aquellos restaurantes que contienen 'Mad' como las tres primeras letras de su nombre.
+//! 14.    Encuentre el id del restaurante, el nombre, el distrito y el tipo de cocina de aquellos restaurantes cuyas especialidades no son ni 'Americana' ni 'China' y el nombre del restaurante comienza con la letra 'Wil'.
+//! 15.    Encuentra los restaurantes que pertenecen al barrio Bronx y preparan platos americanos o chinos.
+//! 16.    Encuentre el id del restaurante, el nombre, el distrito y el tipo de cocina para aquellos restaurantes que pertenecen al distrito 'Staten Island', 'Queens', 'Bronx' o 'Brooklyn'.
+//! 17.    Encuentre el id del restaurante, el nombre, el distrito y el tipo de cocina para aquellos restaurantes que no pertenecen a los distritos de 'Staten Island', 'Queens', 'Bronx' o 'Brooklyn'.
+//! 18.    Encuentre la identificación del restaurante, el nombre, el municipio y el tipo de cocina de aquellos restaurantes que lograron al menos una puntuación que no supere los 10.
+//! 19.    Ordena el nombre de los restaurantes en orden ascendente junto con todas las columnas.
+//! 20.    ordenar el nombre de los restaurantes en forma descendente junto con todas las columnas.
+//! 21.    ordenar el nombre de la cocina en orden ascendente y para esa misma cocina el municipio debe estar en orden descendente.
+//! 22.    Verificar si todas las direcciones contienen la palabra “Street” o no.
+//! 23.    Escriba una consulta MongoDB que seleccionará todos los documentos en la colección de restaurantes donde el valor del campo coord es Doble.
 
