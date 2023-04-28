@@ -118,10 +118,36 @@ use('sample_restaurants');
 
 //* 18.    Encuentre la identificación del restaurante, el nombre, el municipio y el tipo de cocina de aquellos restaurantes que lograron al menos una puntuación que no supere los 10.
 
-
+// db.restaurants.find(
+//     { "grades":{$elemMatch: {score: {$lte:10}}} },
+//     {
+//         _id: false,
+//         restaurant_id: true,
+//         name: true,
+//         borough: true,
+//         cuisine: true,
+//         "grades.score": true
+//     }
+// );
 
 //* 19.    Ordena el nombre de los restaurantes en orden ascendente junto con todas las columnas.
+
+// db.restaurants.find().sort({name: 1});
+
 //* 20.    ordenar el nombre de los restaurantes en forma descendente junto con todas las columnas.
+
+// db.restaurants.find().sort({ name: -1 });
+
 //* 21.    ordenar el nombre de la cocina en orden ascendente y para esa misma cocina el municipio debe estar en orden descendente.
+
+// db.restaurants.find().sort({ cuisine: 1, borough: -1 });
+
+
 //* 22.    Verificar si todas las direcciones contienen la palabra “Street” o no.
+
+// db.restaurants.find({ 'address.street': { $not: /Street/} });
+
+
 //* 23.    Escriba una consulta MongoDB que seleccionará todos los documentos en la colección de restaurantes donde el valor del campo coord es Doble.
+
+// db.restaurants.find({ "address.coord": { $type: 'double' } });
