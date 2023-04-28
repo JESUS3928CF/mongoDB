@@ -119,14 +119,14 @@ use('sample_restaurants');
 //* 18.    Encuentre la identificación del restaurante, el nombre, el municipio y el tipo de cocina de aquellos restaurantes que lograron al menos una puntuación que no supere los 10.
 
 // db.restaurants.find(
-//     { "grades":{$elemMatch: {score: {$lte:10}}} },
+//     { 'grades.score': { $lt: 10 } },
 //     {
 //         _id: false,
 //         restaurant_id: true,
-//         name: true,
 //         borough: true,
 //         cuisine: true,
-//         "grades.score": true
+//         name: true,
+//         'grades.score': true,
 //     }
 // );
 
@@ -142,12 +142,18 @@ use('sample_restaurants');
 
 // db.restaurants.find().sort({ cuisine: 1, borough: -1 });
 
-
 //* 22.    Verificar si todas las direcciones contienen la palabra “Street” o no.
 
 // db.restaurants.find({ 'address.street': { $not: /Street/} });
 
-
 //* 23.    Escriba una consulta MongoDB que seleccionará todos los documentos en la colección de restaurantes donde el valor del campo coord es Doble.
 
 // db.restaurants.find({ "address.coord": { $type: 'double' } });
+
+//* 24. ¿Cuántos restaurantes están ubicados en el distrito de Queens?¿Cuántos en Brooklyn?¿Cuántos en el Bronx?
+
+// db.restaurants.count({ cuisine: 'American', borough: 'Bronx' });
+
+//* 25. ¿Cuántos restaurantes que estpan en el Bronx cocinan comida de tipo "Americana"?
+
+// db.restaurants.count({ $and: [{"borough":{$eq:'Bronx'}},{"cuisine":{$eq:'American'}}] } );
