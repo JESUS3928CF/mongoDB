@@ -44,12 +44,25 @@ use('sample_airbnb');
 
 db.listingsAndReviews.aggregate([
     {
+        $match: {
+            'address.country': 'Brazil',
+            amenities: 'Internet',
+        },
+    },
+    {
         $project: {
             cantidadComenterios: {
                 $size: '$reviews',
             },
-            // "reviews": true,
-            // "review_scores": true,
+            amenities: {
+                $filter: {
+                    input: '$amenities',
+                    as: 'servicio',
+                    cond: { $eq: ['$$servicio', 'Internet'] },
+                },
+            },
+            // country: '$address.country',
+            'address.country': true,
             review_scores_rating: '$review_scores.review_scores_rating',
         },
     },
@@ -63,7 +76,7 @@ db.listingsAndReviews.aggregate([
     },
 ]);
 
-// db.listingsAndReviews.aggregate([])
+// db.listingsAndReviews.aggregate([]);
 
 //* Utilizando la base datos de sample_restaurants, construir un tablero que nos permita mostrar:
 //! ¿Cuántos restaurantes hay en total?
