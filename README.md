@@ -1,2 +1,2 @@
 # mongoDB
-Primer taller de mongo
+Repocitorio para las consultas y talleres de mongo db
