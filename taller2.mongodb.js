@@ -100,9 +100,12 @@ use('sample_airbnb');
 
 use('sample_restaurants');
 
-db.restaurants.count();
-
 //! ¿Cuántos restaurantes hay en total?
+
+// <iframe
+//     style='background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;'
+//     src='https://charts.mongodb.com/charts-project-0-npqpv/embed/dashboards?id=f1add6b3-d51d-484f-af0a-899518b08d2b&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed'
+// ></iframe>;
 
 //! ¿Cuál es el distrito que cuenta con el mayor número de restaurantes?
 
