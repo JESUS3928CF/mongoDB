@@ -76,7 +76,6 @@ use('sample_airbnb');
 //     },
 // ]);
 
-
 //! 4 Usando la colección listingsAndReviews de sample_airbnb, muestre el costo promedio de una habitación en cada país para las propiedades de tipo casa.
 
 // db.listingsAndReviews.aggregate([
@@ -95,8 +94,14 @@ use('sample_airbnb');
 //     },
 // ]);
 
-
 //* Utilizando la base datos de sample_restaurants, construir un tablero que nos permita mostrar:
+
+//todo:  Frame con todas las respuestas
+// <iframe
+//     style='background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;'
+//     src='https://charts.mongodb.com/charts-project-0-npqpv/embed/dashboards?id=f1add6b3-d51d-484f-af0a-899518b08d2b&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed'
+// ></iframe>;
+
 
 use('sample_restaurants');
 
@@ -109,6 +114,21 @@ use('sample_restaurants');
 
 //! ¿Cuál es el distrito que cuenta con el mayor número de restaurantes?
 
+// <iframe
+//             style="background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;"
+//             src="https://charts.mongodb.com/charts-project-0-npqpv/embed/dashboards?id=f1add6b3-d51d-484f-af0a-899518b08d2b&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed"></iframe>
+// </body>
+
 //! ¿Cuántos restaurantes hay por cada tipo de cocina?
 
+// <iframe
+//     style='background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;'
+//     src='https://charts.mongodb.com/charts-project-0-npqpv/embed/dashboards?id=f1add6b3-d51d-484f-af0a-899518b08d2b&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed'
+// ></iframe>;
+
 //! ¿Cuántos restaurantes hay por cada código postal?
+
+// <iframe
+//     style='background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;'
+//     src='https://charts.mongodb.com/charts-project-0-npqpv/embed/dashboards?id=f1add6b3-d51d-484f-af0a-899518b08d2b&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed'
+// ></iframe>;
