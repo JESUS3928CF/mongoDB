@@ -51,7 +51,13 @@ db.createCollection('venta', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Objeto validación de cliente',
-            required: ['id_venta', 'fecha', 'precio_total', 'estado_de_venta', 'fk_cliente'],
+            required: [
+                'id_venta',
+                'fecha',
+                'precio_total',
+                'estado_de_venta',
+                'fk_cliente',
+            ],
             properties: {
                 id_venta: {
                     bsonType: 'int',
@@ -59,25 +65,20 @@ db.createCollection('venta', {
                         'Identificador unico para las ventas y es requerido',
                 },
                 fecha: {
-                    bsonType: 'date',
-                    description: 'fecha es de tipo date y es requerido',
+                    bsonType: 'string',
+                    description: 'fecha es de tipo string y es requerido',
                 },
                 precio_total: {
                     bsonType: 'double',
                     description: 'Precio total es un decimal y es requerido',
                 },
-                email: {
-                    bsonType: 'string',
-                    description: 'email es un string y no es requerido',
-                },
                 estado_de_venta: {
-                    bsonType: ' ',
+                    bsonType: 'string',
                     description: 'email es un string y es requerido',
                 },
                 fk_cliente: {
                     bsonType: 'int',
-                    description:
-                        'el estado es un int y es requerido ademas loso puede tener un dijito',
+                    description: 'el cliente es un int y es requerido',
                 },
             },
         },

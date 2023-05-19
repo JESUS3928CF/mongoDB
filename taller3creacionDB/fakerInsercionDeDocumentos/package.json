@@ -1,0 +1,17 @@
+{
+  "name": "fakerinserciondedocumentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesús CF",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^5.5.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.1"
+  }
+}
