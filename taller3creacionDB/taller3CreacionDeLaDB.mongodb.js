@@ -74,7 +74,8 @@ db.createCollection('venta', {
                 },
                 estado_de_venta: {
                     bsonType: 'string',
-                    description: 'email es un string y es requerido',
+                    description:
+                        'el estado de la venta es un string y es requerido',
                 },
                 fk_cliente: {
                     bsonType: 'int',
@@ -99,26 +100,21 @@ db.createCollection('detalle_venta', {
                 'fk_venta',
             ],
             properties: {
-                id_venta: {
+                id_detalle_venta: {
                     bsonType: 'int',
                     description:
-                        'Identificador unico para las ventas y es requerido',
+                        'Identificador único para las ventas y es requerido',
                 },
-                precio_total: {
+                cantidad: {
+                    bsonType: 'int',
+                    description: 'Total de venta es un decimal y es requerido',
+                },
+                subtotal: {
                     bsonType: 'double',
-                    description: 'Precio total es un decimal y es requerido',
-                },
-                email: {
-                    bsonType: 'string',
-                    description: 'email es un string y no es requerido',
-                },
-                estado_de_venta: {
-                    bsonType: 'string',
-                    description:
-                        'el estado de la venta es un string y es requerido',
+                    description: 'subtotal es un double y no es requerido',
                 },
                 producto: {
-                    bsonType: 'string',
+                    bsonType: 'object',
                     description:
                         'el estado de la venta es un string y es requerido',
                 },
