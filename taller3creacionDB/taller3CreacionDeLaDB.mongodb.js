@@ -69,7 +69,7 @@ db.createCollection('venta', {
                     description: 'fecha es de tipo string y es requerido',
                 },
                 precio_total: {
-                    bsonType: 'double',
+                    bsonType: 'int',
                     description: 'Precio total es un decimal y es requerido',
                 },
                 estado_de_venta: {
@@ -110,7 +110,7 @@ db.createCollection('detalle_venta', {
                     description: 'Total de venta es un decimal y es requerido',
                 },
                 subtotal: {
-                    bsonType: 'double',
+                    bsonType: 'int',
                     description: 'subtotal es un double y no es requerido',
                 },
                 producto: {
@@ -119,7 +119,7 @@ db.createCollection('detalle_venta', {
                         'el estado de la venta es un string y es requerido',
                 },
                 fk_venta: {
-                    bsonType: 'object',
+                    bsonType: 'int',
                     description: 'la venta es un int y es requerido',
                 },
             },
