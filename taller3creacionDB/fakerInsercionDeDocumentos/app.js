@@ -12,7 +12,7 @@ for (let index = 1; index < 2001; index++) {
         apellido: faker.person.lastName(),
         telefono: faker.phone.number(),
         email: faker.internet.email(),
-        direccion: faker.address.city(),
+        direccion: faker.location.city(),
         estado: faker.helpers.arrayElement([true, false], 1, 1),
     };
 
